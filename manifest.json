@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Ad Blocker",
+  "description": "Wish ads were kind of the best part of Facebook. The rest of this can go to hell.",
+  "background": { "service_worker": "index.js" },
+  "version": "1.0",
+  "action": {
+    "default_icon": {
+      "32": "icon.ico"
+    }
+  },
+  "permissions": [
+    "scripting", "activeTab", "webNavigation","tabs"
+   ],
+  "host_permissions": [
+    "https://*.facebook.com/*"
+  ]
+}
