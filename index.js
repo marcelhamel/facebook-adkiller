@@ -15,6 +15,4 @@ const removeFacebookAds = () => {
 
 const filter = { url: [{ hostContains: '.facebook', schemes: ['http', 'https'] }]};
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.webNavigation.onCompleted.addListener(removeFacebookAds, filter);
-});
+chrome.webNavigation.onCompleted.addListener(removeFacebookAds, filter);
